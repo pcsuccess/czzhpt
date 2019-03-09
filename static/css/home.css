@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors panrong
+ * @date    2019-01-04 14:18:33
+ * @version $Id$
+ */
+
+/*common*/
+body, div, p, span, ul, li, img, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "PingFangSC-Regular", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  font-size: 14px;
+  background-color: #FFF;
+}
+.orange {
+  color: #FF6300;
+}
+.bg-red {
+  background-color: #FF0000;
+}
+.bg-green {
+  background-color: #00FF00;
+}
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*头部*/
+.page-header {
+  height: 60px;
+  line-height: 60px;
+  padding: 10px;
+  background: linear-gradient(to right, #4768D0, #3EA7F3);
+  color: #FFF;
+  display: flex;
+  box-shadow: 0px 8px 8px 0px rgba(172, 196, 255, 0.2);
+}
+.page-header .ph-l {
+}
+.page-header .ph-m {
+  flex: 2;
+}
+.page-header .ph-d {
+}
+.page-header img.icon-jh {
+  height: 100%;
+  vertical-align: top;
+}
+.page-header .ph-title {
+  font-size: 32px;
+  font-weight: 400;
+}
+.page-header .ph-center {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  margin: 10px auto auto;
+  max-width: 900px;
+}
+.page-header .ph-center .ld,
+.page-header .ph-center .rd {
+  width: 0px;
+  height: 0px;
+  border-width: 25px 15px 25px 15px;
+  border-style: solid;
+  margin-top: 10px;
+}
+.page-header .ph-center .ld {
+  border-color: transparent #FFF #FFF transparent;
+  margin-right: -3px;
+}
+.page-header .ph-center .rd {
+  border-color:  transparent transparent #FFF #FFF;
+  margin-left: -3px;
+}
+.page-header .ph-center .md {
+  display: flex;
+  background-color: #FFF;
+  z-index: 3;
+  flex: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.page-header .ph-center .md li {
+  color: #000;
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+}
+.page-header .ph-center .md li img {
+  width: 30px;
+  vertical-align: middle;
+}
+.page-header .ph-center .md li .separator {
+  float: right;
+  color: #DDD;
+}
+.page-header .ph-right li {
+  float: left;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.page-header .ph-right li img {
+  width: 26px;
+  vertical-align: middle;
+}
+
+/*主体*/
+.page-body {
+  clear: both;
+}
+
+/*左下角导航栏*/
+.fixed-navs {
+  position: fixed;
+  left: 28px;
+  bottom: 35px;
+  height: 60px;
+  background: rgba(69, 81, 97, 1);
+  box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.34);
+  border-radius: 4px 4px;
+  opacity: 0.8;
+}
+.fixed-navs .expand-nav {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(307deg, rgba(62, 167, 243, 1) 0%, rgba(61, 99, 216, 1) 100%);
+  border-radius: 4px 0px 0px 4px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+}
+.fixed-navs .expand-nav img {
+  width: 33px;
+  height: 26px;
+  margin-top: 17px;
+}
+.fixed-navs ul.nav {
+  height: 60px;
+  display: flex;
+  float: left;
+}
+.fixed-navs .nav li {
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.fixed-navs .nav li:hover {
+  background-color: #000000;
+}
+.fixed-navs .nav li img {
+  width: 2em;
+}
+.fixed-navs .nav li p {
+  color: #fff;
+  line-height: 22px;
+}
+
+/*右下角工具栏*/
+.fixed-bottom-tools {
+  position: fixed;
+  right: 39px;
+  bottom: 40px;
+  height: 50px;
+  background: #FFF;
+  box-shadow: 0px 3px 9px 4px rgba(62, 62, 62, 0.2);
+  border-radius: 4px 6px 5px 4px;
+}
+.fixed-bottom-tools .expand-tool {
+  width: 55px;
+  height: 50px;
+  background-color: #1370D4;
+  text-align: center;
+  border-radius: 0px 6px 5px 0px;
+  float: right;
+  cursor: pointer;
+}
+.fixed-bottom-tools .expand-tool img {
+  width: 36px;
+  height: 36px;
+  margin-top: 7px;
+}
+.fixed-bottom-tools ul.tool-bottom {
+  float: right;
+  display: flex;
+  padding: 15px 0;
+}
+.fixed-bottom-tools ul.tool-bottom li {
+  padding: 0 15px;
+  color: #444;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+}
+
+/*右侧工具栏*/
+.fixed-right-tools {
+  position: fixed;
+  right: 39px;
+  bottom: 130px;
+  width: 30px;
+}
+.fixed-right-tools ul li {
+  padding: 5px 0;
+  background:r gba(255,255,255,1);
+  box-shadow: 0px 0px 4px 4px rgba(0, 79, 169, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.fixed-right-tools ul li .status-color {
+  width: 10px;
+  height: 10px;
+  margin: auto;
+}
+.fixed-right-tools ul li .status-text {
+  font-size: 12px;
+  color: #666;
+}
+.tool-name, .tool-background {
+  position: relative;
+}
+.tool-name label, .tool-background label {
+  position: absolute;
+  width: 80px;
+  background-color: #666;
+  color: #FFF;
+  padding: 2px 0px;
+  left: -90px;
+  text-align: center;
+}
+.tool-name label:after, .tool-background label:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #666;
+  position: absolute;
+  right: -16px;
+}
+.fixed-right-tools ul li .map-zoom {
+  padding: 0 5px;
+}
+.map-zoom .plus, .map-zoom .minus {
+  font-size: 20px;
+  color: #646464;
+}
+.map-zoom .plus {
+  border-bottom: 1px solid #DFDFDF;
+}
+
+/*窗体*/
+.info-win {
+  width: 200px;
+  box-shadow: 0px 4px 10px 2px rgba(61, 96, 134, 0.2);
+  position: relative;
+  background-color: #FFF;
+}
+.info-win_hd {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  background-color: #3D64D9;
+  border-radius: 8px 8px 0px 0px;
+  text-align: center;
+  color: #FFF;
+}
+.info-win_bd {
+  padding: 10px 0;
+}
+.info-win_bd ul li {
+  display: flex;
+  padding: 2px 5px;
+  align-items: center;
+}
+.info-win_bd ul li div.icon {
+  width: 40px;
+  text-align: center;
+}
+.info-win_bd ul li .progress {
+  width: calc(200px - 50px);
+  height: 18px;
+  position: relative;
+  background-color: #E9F2FF;
+  border-radius: 9px;
+}
+.info-win_bd ul li .progress .progress-bar {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: #3D86E6;
+  border-radius: 9px;
+}
+.info-win_bd ul li .progress .progress-per {
+  position: absolute;
+  right: 10px;
+  line-height: 18px;
+  color: #FF6300;
+}
+.info-win_ft {
+  border-top: 1px solid #DDD;
+  padding: 10px;
+}
+.info-win_ft .info-win_btn {
+  width: 60px;
+  line-height: 20px;
+  color: #3D86E6;
+  border: 1px solid #3D86E6;
+  border-radius: 3px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-width: 60px 8px;
+  border-style: solid;
+  border-color: #FFF #FFF transparent transparent;
+  filter: drop-shadow(6px -10px 10px rgba(61, 96, 134, 0.6));
+  position: absolute;
+  z-index: -1;
+}
